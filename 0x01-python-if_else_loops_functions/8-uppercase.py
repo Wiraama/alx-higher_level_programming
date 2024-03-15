@@ -4,9 +4,9 @@
 
 def uppercase(str):
     for s in str:
-        if 'a' <= s <= 'z':
-            S = chr(ord(s) - 32)
+        if ord(s) >= 97 and ord(s) <= 122:
+            s = chr(ord(s) - 32)
         else:
-            S = s
-        print("{:c}".format(S), end="")
+            s = s
+        print("{:c}".format(s), end="")
     print("")
