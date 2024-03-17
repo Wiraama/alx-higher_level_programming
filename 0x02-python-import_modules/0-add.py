@@ -1,4 +1,4 @@
-#!/urs/bin/python3
+#!/usr/bin/python3
 '''mports the function def add(a, b): from the file add_0.py and prints the result of the addition'''
 
 
