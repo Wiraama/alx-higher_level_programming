@@ -2,7 +2,7 @@
 '''program that import function frm the file , does some math and print results'''
 
 if __name__ == "__main__":
-    from calculator_1 import sub, add, mul, div
+    from calculator_1 import add, sub, mul, div
     a = 10
     b = 5
 
