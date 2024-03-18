@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""mports all functions from the file calculator_1.py and handles basic operations."""
+"""mports all functions from the file calculator_1.py
+and handles basic operations."""
+
 
 if __name__ == "__main__":
     import sys
