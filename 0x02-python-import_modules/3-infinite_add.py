@@ -9,5 +9,5 @@ if __name__ == "__main__":
         print("0")
     for n in sys.argv[1:]:
         result += int(n)
-        
+
     print(result)
