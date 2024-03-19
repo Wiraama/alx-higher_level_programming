@@ -1,12 +1,6 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    t = ()
-    count = 0
-    if sentence == 0:
-        t = (0, "None")
-
-    else:
-        count = len(sentence)
-        first = sentence[0]
-        t = (count, first)
-    return t
+    total = len(sentence)
+    char = sentence[0] if total > 0 else "None"
+    new = total, char
+    return(new)
