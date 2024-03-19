@@ -1,55 +1,30 @@
 #include "lists.h"
-#include <stdlib>
 
+/**
+ * is_palindrome - function to call check_pal to see if list is palindrome
+ * @head: ptr to the beginning of the list
+ * Return: 0 if not palindrome else 1
+ */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head, *fast = *head, *temp = *head, *dup = NULL;
-	listint_t *f_node = NULL;
-	listint_t *c_node = *head;
-	listint_t *l_node = NULL;
-
-	/**reversing nodes**/
-	while (c_node != NULL)
-	{
-		l_node = c_node->next;
-		c_node->next = f_node;
-		f_node = c_node;
-		c_node = l_node;
-	}
-
-	*head = f_node;
-
-	/** checking and returning palidrome **/
-	if (*head == NULL || (*head)->next == NULL)
+	if (head == NULL || *head == NULL)
 		return (1);
-	while (1)
-	{
-		fast = fast->next->next;
-		if (!fast)
-		{
-			dup = slow->next;
-			break;
-		}
-		if (!fast->next)
-		{
-			dup  slow->next->next;
-			break;
-		}
-		slow = slow->next;
-	}
-	while (dup && temp)
-	{
-		if (temp->n == dup->n)
-		{
-			dup = dup->next;
-			temp = temp->next;
-		}
-		else
-		{
-			return (0);
-		}
-	}
-	if(!dup)
+	return (check_pal(head, *head));
+}
+/**
+ * check_pal - function to check if the list is palindrome
+ * @head: ptr to the beginning of the list
+ * @last: ptr to the end of the list
+ * Return: 0 if not palindrom else 1
+ */
+int check_pal(listint_t **head, listint_t *last)
+{
+	if (last == NULL)
 		return (1);
+	if (check_pal(head, last->next) && (*head)->n == last->n)
+	{
+		*head = (*head)->next;
+		return (1);
+	}
 	return (0);
 }
