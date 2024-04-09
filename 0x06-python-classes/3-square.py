@@ -6,6 +6,7 @@ class Square:
     """reps square"""
 
     def __init__(self, size=0):
+        """creates new instances"""
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif size <= 0:
@@ -14,4 +15,5 @@ class Square:
             self.__size = size
 
     def area(self):
+        """returns area"""
         return (self.__size * self.__size)
