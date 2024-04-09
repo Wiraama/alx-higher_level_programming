@@ -3,21 +3,27 @@
 
 
 class Square:
-    """Square class"""
+
+    """class defination"""
     def __init__(self, size):
+        """defines & initialize new attribute"""
         self.__size = size
+
     @property
-
     def size(self):
-        return self.__size
-    @size.setter
 
+        """defines new method size"""
+        return self.__size
+
+    @size.setter
     def size(self, value):
+
+        """defines metod and attribute"""
         if not isinstance(value, int):
-            raise TypeError("size must be an integer")
+            raise TypeError("size must be n integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        self.__size = value
+
     def area(self):
         return self.__size ** 2
