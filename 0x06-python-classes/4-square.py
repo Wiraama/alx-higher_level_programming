@@ -19,7 +19,7 @@ class Square:
     def size(self, value):
 
         """defines metod and attribute"""
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("size must be n integer")
         elif value < 0:
             raise ValueError("size must be >= 0")
@@ -27,4 +27,4 @@ class Square:
             self.__size = value
 
     def area(self):
-        return self.__size * self.__size
+        return self.__size ** 2
