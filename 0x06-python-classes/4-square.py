@@ -5,7 +5,7 @@
 class Square:
 
     """class defination"""
-    def __init__(self, size):
+    def __init__(self, size=0):
         """defines & initialize new attribute"""
         self.__size = size
 
