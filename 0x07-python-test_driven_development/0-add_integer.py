@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/python3
 """
     rototype: def add_integer(a, b=98):
     a and b must be integers or floats,
