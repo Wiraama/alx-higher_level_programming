@@ -7,8 +7,5 @@ import json
 
 
 def class_to_json(obj):
-    """json serialization"""
-
-
-    with open(obj, 'w', encoding="utf-8"))as f:
-        return json.dumps(f)
+    """Return the dictionary represntation of a simple data structure"""
+    return obj.__dict__
