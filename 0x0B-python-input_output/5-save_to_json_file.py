@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""unction that writes an Object to a text file, using a JSON representation:"""
+"""unction that writes an Object to a text file,
+using a JSON representation:"""
 
 
 import json
