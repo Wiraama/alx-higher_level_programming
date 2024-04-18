@@ -10,5 +10,5 @@ def class_to_json(obj):
     """json serialization"""
 
 
-    with open(obj, 'r', encoding="utf-8"))as f:
+    with open(obj, 'w', encoding="utf-8"))as f:
         return json.dumps(f)
