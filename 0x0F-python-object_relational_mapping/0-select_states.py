@@ -26,9 +26,10 @@ if __name__ == "__main__":
 
     """printing state"""
     for state in states:
-        if state[1] not in printed:
+        """if state[1] not in printed:
             print(state)
-            printed.add(state[1])
+            printed.add(state[1])"""
+        print(state)
 
     cursor.close()
     db.close()

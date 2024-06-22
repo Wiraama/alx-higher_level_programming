@@ -25,8 +25,9 @@ if __name__ == "__main__":
     states = cursor.fetchall()
     printed_states = set()
     for state in states:
-        if state[1] not in printed_states:
+        """if state[1] not in printed_states:
             print(state)
-            printed_states.add(state[1])
+            printed_states.add(state[1])"""
+        print(state)
     cursor.close()
     db.close()
