@@ -22,10 +22,13 @@ if __name__ == "__main__":
     """ select all stated ordered by id """
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
     states = cursor.fetchall()
+    printed = set()
 
     """printing state"""
     for state in states:
-        print(state)
+        if state[1] not in printed:
+            print(state)
+            printed.add(state[1])
 
     cursor.close()
     db.close()
