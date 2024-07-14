@@ -6,17 +6,12 @@ sends a request to the URL and displays the body of the response (decoded in utf
 
 import sys
 import urllib.request
-
+import urllib.error
 if __name__ == '__main__':
-    if sys.argv != 2:
+    if len(sys.argv) != 2:
         print('Usage: ./script <URL>')
         sys.exit(1)
     url = sys.argv[1]
-
-    # decoding whats in url
-    data = urllib.parse.urlencode({'url': url}).encode('utf-8')
-    # sending request
-    req = urllib.request.Request(data=data)
 
     try:
         with urllib.request.urlopen(url) as responce:
