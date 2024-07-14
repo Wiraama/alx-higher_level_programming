@@ -14,10 +14,10 @@ if __name__ == '__main__':
 
     url = sys.argv[1]
 
-    try:
-        response = requests.get(url)
-        x_response_id = response.headers.get('X-Request-Id')
+    response = requests.get(url)
+    x_response_id = response.headers.get('X-Request-Id')
 
+    try:
         if x_response_id:
             print(x_response_id)
         else:
