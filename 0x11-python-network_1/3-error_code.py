@@ -18,4 +18,4 @@ if __name__ == '__main__':
             content = reponce.read().decode('utf-8')
             print(content)
     except urllib.error.HTTPError as error:
-        print(error.reason)
+        print('Error code: ', error.code)
