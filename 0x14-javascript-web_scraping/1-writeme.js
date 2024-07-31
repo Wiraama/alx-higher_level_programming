@@ -4,10 +4,5 @@ const content = process.argv[3];
 const filename = process.argv[2];
 
 fs.writeFile(filename, content, 'utf-8', err => {
-	if (err) {
-		console.log(err);
-	}
-	else {
-		console.log(content);
-	}
+	if (err) console.log(err);
 });
