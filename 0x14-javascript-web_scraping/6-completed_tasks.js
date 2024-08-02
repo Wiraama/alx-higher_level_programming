@@ -28,8 +28,6 @@ request(process.argv[2], (error, response, body) => {
 				count[todo.userId] += 1;
 			}
 		});
-		Object.keys(count).forEach(userId => {
-			console.log(`'${userId}': ${count[userId]}`);
-		});
+		console.log(count);
 	}
 });
