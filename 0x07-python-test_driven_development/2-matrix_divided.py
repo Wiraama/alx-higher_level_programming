@@ -3,6 +3,7 @@
 module to devide all elements in a matrix
 """
 
+
 def matrix_divided(matrix, div):
     """
     function matrix
