@@ -1,5 +1,12 @@
 #!/usr/bin/python3
+"""
+module to devide all elements in a matrix
+"""
+
 def matrix_divided(matrix, div):
+    """
+    function matrix
+    """
     errorMessage = "matrix must be a matrix (list of lists) of integers/floats"
     if not matrix:
         raise TypeError(errorMessage)
