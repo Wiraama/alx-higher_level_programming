@@ -14,13 +14,12 @@ if __name__ == '__main__':
 
     url = sys.argv[1]
 
-    response = requests.get(url)
-    x_response_id = response.headers.get('X-Request-Id')
-
     try:
+        response = requests.get(url)
+        x_response_id = response.headers.get('X-Request-Id')
+
         if x_response_id:
             print(x_response_id)
-        else:
-            print('Header not found')
+
     except requests.RequestException as error:
         print('error encountered'.format(error))
