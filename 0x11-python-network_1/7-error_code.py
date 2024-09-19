@@ -5,10 +5,6 @@ import requests
 import sys
 
 if __name__ == '__main__':
-    if len(sys.argv) != 2:
-        print("Usage: <script> url")
-        sys.exit(1)
-
     res = requests.get(sys.argv[1])
 
     if res.status_code >= 400:
