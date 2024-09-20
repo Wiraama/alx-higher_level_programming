@@ -17,4 +17,4 @@ if __name__ == "__main__":
             owner = commit.get('commit').get('author').get('name')
             print(f"{sha}: {owner}")
         else:
-            print(f"Error {res.status_code}")
+            print(f"Error {res.status_code}: Unable to fetch commits")
